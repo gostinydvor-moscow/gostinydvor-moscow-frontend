@@ -1,0 +1,58 @@
+// footer
+.footer
+	+openPage
+
+	&-wrapper
+		padding: 25px 0
+		border-top: 1px solid $gray
+
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-block
+		display: flex
+		align-items: center
+
+	&-logo-wrapper
+		display: flex
+		flex-direction: column
+
+	&-logo
+		&__image
+			width: 100px
+
+	&-nav
+		&__link
+			margin: 0 15px
+
+			+sfMedium
+			+transition
+
+			&:hover
+				color: $mainColor
+
+			&.active
+				color: $mainColor
+
+	&-social
+		margin-left: 15px
+
+		&__item
+			& > svg
+				fill: $black
+				+transition
+
+				&:hover
+					fill: $mainColor
+
+			&:first-child
+				margin-right: 5px
+
+	&__copyright
+		font-size: 15px
+		color: $gray
+
+// nagibinstudio
+.nagibinstudio
+	margin-top: 35px

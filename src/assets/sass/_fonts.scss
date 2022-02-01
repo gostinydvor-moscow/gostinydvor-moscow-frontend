@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'San Francisco Pro Light';
+	src: url('.././fonts/SFProDisplay-Light.eot');
+	src: url('.././fonts/SFProDisplay-Light.eot?#iefix') format('embedded-opentype'),
+	url('.././fonts/SFProDisplay-Light.woff') format('woff'),
+	url('.././fonts/SFProDisplay-Light.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'San Francisco Pro Medium';
+	src: url('.././fonts/SFProDisplay-Medium.eot');
+	src: url('.././fonts/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+	url('.././fonts/SFProDisplay-Medium.woff') format('woff'),
+	url('.././fonts/SFProDisplay-Medium.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// mixin
+@mixin sfLight {
+	font-family: 'San Francisco Pro Light', sans-serif;
+	font-weight: 300;
+}
+
+@mixin sfMedium {
+	font-family: 'San Francisco Pro Medium', sans-serif;
+	font-weight: 500;
+}
+
+@mixin ptRegular {
+	font-family: 'PT Serif', serif;
+	font-weight: 400;
+}

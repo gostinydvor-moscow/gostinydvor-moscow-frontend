@@ -1,0 +1,148 @@
+// header
+.header
+	margin: 15px 0
+	+openPage
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding-bottom: 15px
+
+		border-bottom: 1px solid $gray
+
+	&-logo
+		&__image
+			width: 75px
+			+imageNoSelect
+
+	&-nav
+		&__link
+			margin: 0 15px
+
+			+sfMedium
+			+transition
+
+			&:hover
+				color: $mainColor
+
+			&.active
+				color: $mainColor
+
+	&-right
+		display: flex
+		align-items: center
+
+	&-phone
+		&__link
+			+sfMedium
+			+transition
+
+			&:hover
+				color: $mainColor
+
+	&-social
+		margin-left: 15px
+
+		&__item
+			& > svg
+				fill: $black
+				+transition
+
+				&:hover
+					fill: $mainColor
+			
+			&:first-child
+				margin-right: 5px
+
+	&-menu-btn
+		justify-content: center
+		align-items: center
+		display: none
+
+	//  modal
+	&-modal-menu
+		z-index: 500
+		position: fixed
+
+		width: 100%
+		height: 100%
+
+		top: 0
+		left: 0
+
+		background-color: rgba(0, 0, 0, 0.5)
+
+		+openPopup
+
+		&.close
+			+closePopup
+
+		&-content
+			overflow: auto
+			position: absolute
+
+			bottom: 0
+			left: 0
+
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			width: 100%
+			height: 70%
+
+			background-color: $white
+
+			&-nav
+				&__link
+					display: block
+					font-size: 64px
+					
+
+					+sfMedium
+					+transition
+
+					&:last-child
+						margin-bottom: 0
+
+					&:hover
+						color: $mainColor
+
+					&.active
+						color: $mainColor
+
+			&__phone
+				display: block
+				font-size: 64px
+
+				+sfMedium
+				+transition
+
+				&:hover
+					color: $mainColor
+
+// cookies
+.cookies
+	z-index: 100
+
+	position: fixed
+	width: 60%
+
+	bottom: 25px
+	left: 50%
+	transform: translateX(-50%)
+
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	padding: 15px 25px
+
+	background-color: #f1f1f1
+	+borderRadius
+
+	&__title
+		font-size: 18px
+		max-width: 75%
