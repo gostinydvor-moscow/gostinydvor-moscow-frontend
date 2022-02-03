@@ -1,8 +1,6 @@
 import React from "react";
 import {NavLink, Link} from "react-router-dom";
 
-import Logo from "../../assets/images/logo.png";
-
 import {HeaderModalMenu} from "../";
 
 const Header = () => {
@@ -84,7 +82,7 @@ const Header = () => {
                     <div className="header-wrapper">
                         <Link to="/" className="header-logo">
                             <img
-                                src={Logo}
+                                src={`${process.env.REACT_APP_IMAGE_DOMEN}/all/logo.svg`}
                                 alt="Гостиный двор Москва"
                                 className="header-logo__image"
                             />
@@ -104,6 +102,13 @@ const Header = () => {
                                 activeClassName="active"
                             >
                                 Мероприятия
+                            </NavLink>
+                            <NavLink
+                                to="/magazine"
+                                className="header-nav__link"
+                                activeClassName="active"
+                            >
+                                Журнал
                             </NavLink>
                             <NavLink
                                 to="/contacts"

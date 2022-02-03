@@ -3,7 +3,7 @@ import {Helmet} from "react-helmet";
 import {Link, animateScroll as scroll} from "react-scroll";
 import {useDispatch, useSelector} from "react-redux";
 
-import {Loader, Maps, EventPageAbout} from "../components/";
+import {Loader, Maps, EventPageAbout, EventPageMagazine} from "../components/";
 
 import {fetchEventByUrl} from "../redux/actions/events";
 
@@ -66,12 +66,9 @@ const EventPage = ({
                                         <h3 className="event-page-top-text__title">
                                             {itemByUrl.title}
                                         </h3>
-                                        <p
-                                            className="event-page-top-text__description"
-                                            dangerouslySetInnerHTML={{
-                                                __html: itemByUrl.description,
-                                            }}
-                                        ></p>
+                                        <p className="event-page-top-text__description">
+                                            {itemByUrl.description}
+                                        </p>
                                         {itemByUrl.eventId !== "" ? (
                                             <Link
                                                 to="event-page-form"
@@ -141,6 +138,13 @@ const EventPage = ({
 
                                 {itemByUrl.about && itemByUrl.about.length ? (
                                     <EventPageAbout about={itemByUrl.about} />
+                                ) : null}
+
+                                {itemByUrl.posts && itemByUrl.posts.length ? (
+                                    <EventPageMagazine
+                                        posts={itemByUrl.posts}
+                                        _id={itemByUrl._id}
+                                    />
                                 ) : null}
 
                                 <div

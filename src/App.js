@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import { Header, Footer } from './components';
 
-import { Home, Contacts, Events, EventPage, PersonalData } from './pages';
+import { Home, Contacts, Events, EventPage, PersonalData, Magazine, MagazinePostPage } from './pages';
 
 const App = () => {
 	return (
@@ -20,6 +20,10 @@ const App = () => {
 					<Route path="/event/:url" render={(props) => <EventPage {...props} />} exact />
 
 					<Route path="/personal-data" render={() => <PersonalData />} exact />
+
+					<Route path="/magazine" render={() => <Magazine />} exact />
+
+					<Route path="/magazine/:id" render={(props) => <MagazinePostPage {...props} />} exact />
 
 					<Route render={() => window.location.href = "/"} exact />
 				</Switch>

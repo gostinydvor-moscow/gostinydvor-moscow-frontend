@@ -1,7 +1,5 @@
 import React from "react";
-import {NavLink, Link} from "react-router-dom";
-
-import Logo from "../../assets/images/logo.png";
+import { NavLink, Link } from "react-router-dom";
 
 const Footer = () => {
     const checkActive = (match, location) => {
@@ -19,7 +17,7 @@ const Footer = () => {
                         <div className="footer-logo-wrapper">
                             <Link to="/" className="footer-logo">
                                 <img
-                                    src={Logo}
+                                    src={`${process.env.REACT_APP_IMAGE_DOMEN}/all/logo.svg`}
                                     alt="Гостиный двор Москва"
                                     className="footer-logo__image"
                                 />
@@ -59,11 +57,25 @@ const Footer = () => {
                                 Мероприятия
                             </NavLink>
                             <NavLink
+                                to="/magazine"
+                                className="footer-nav__link"
+                                activeClassName="footer-nav__link active"
+                            >
+                                Журнал
+                            </NavLink>
+                            <NavLink
                                 to="/contacts"
                                 className="footer-nav__link"
                                 activeClassName="footer-nav__link active"
                             >
                                 Контакты
+                            </NavLink>
+                            <NavLink
+                                to="/personal-data"
+                                className="footer-nav__link"
+                                activeClassName="footer-nav__link active"
+                            >
+                                Политика
                             </NavLink>
                             <a
                                 href="tel:+7 985 508 46 80"
@@ -105,12 +117,6 @@ const Footer = () => {
                                 </svg>
                             </a>
                         </div>
-                    </div>
-
-                    <div className="footer-block">
-                        <p className="footer__copyright">
-                            © Гостиный двор Москва {new Date().getFullYear()}
-                        </p>
                     </div>
                 </div>
             </div>

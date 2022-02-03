@@ -12,3 +12,9 @@ export { default as EventPage } from "./EventPage"
 
 // EventPage
 export { default as PersonalData } from "./PersonalData"
+
+// Magazine
+export { default as Magazine } from "./Magazine"
+
+// MagazinePostPage
+export { default as MagazinePostPage } from "./MagazinePostPage"

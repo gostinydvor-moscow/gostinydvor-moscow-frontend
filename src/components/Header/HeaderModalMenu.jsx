@@ -34,12 +34,28 @@ const HeaderModalMenu = ({
                         Мероприятия
                     </NavLink>
                     <NavLink
+                        to="/magazine"
+                        className="header-modal-menu-content-nav__link"
+                        activeClassName="active"
+                        onClick={closeModalMenu}
+                    >
+                        Журнал
+                    </NavLink>
+                    <NavLink
                         to="/contacts"
                         className="header-modal-menu-content-nav__link"
                         activeClassName="active"
                         onClick={closeModalMenu}
                     >
                         Контакты
+                    </NavLink>
+                    <NavLink
+                        to="/personal-data"
+                        className="header-modal-menu-content-nav__link"
+                        activeClassName="active"
+                        onClick={closeModalMenu}
+                    >
+                        Политика
                     </NavLink>
                 </nav>
                 <a

@@ -1,7 +1,7 @@
 import $api from '../../http/';
 
 export const fetchEventsLimitFirst = () => (dispatch) => {
-	$api.get("/events?page=1&limit=9").then((response) => {
+	$api.get("/events?page=1&limit=6").then((response) => {
 		dispatch(setEventsLimitFirst(response))
 	})
 }
@@ -12,13 +12,13 @@ export const fetchEventsLimit = (page) => (dispatch) => {
 		payload: false
 	})
 
-	$api.get(`/events?page=${page}&limit=9`).then(({ data }) => {
+	$api.get(`/events?page=${page}&limit=6`).then(({ data }) => {
 		dispatch(setEventsLimit(data))
 	})
 }
 
 export const fetchEventsSection = () => (dispatch) => {
-	$api.get("/events?page=1&limit=9").then(({ data }) => {
+	$api.get("/events?page=1&limit=6").then(({ data }) => {
 		dispatch(setEventsSection(data))
 	})
 }

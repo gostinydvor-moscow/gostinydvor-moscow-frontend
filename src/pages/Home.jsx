@@ -1,8 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 
-import {EventMainSlider, EventSection, Maps} from "../components";
+import {
+    EventMainSlider,
+    EventSection,
+    MagazineSection,
+    Maps,
+} from "../components";
 
 const Home = () => {
     React.useEffect(() => {
@@ -18,6 +22,8 @@ const Home = () => {
             <EventMainSlider />
 
             <EventSection />
+
+            <MagazineSection />
 
             <Maps />
         </>

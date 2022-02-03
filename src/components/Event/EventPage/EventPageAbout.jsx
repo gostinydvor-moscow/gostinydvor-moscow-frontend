@@ -7,12 +7,11 @@ const EventPageAbout = ({about}) => {
 
             {about.map((item, index) => (
                 <p
-                    dangerouslySetInnerHTML={{
-                        __html: item.description,
-                    }}
                     className="event-page-about__description"
                     key={`event-page-about__description-${index}`}
-                ></p>
+                >
+                    {item.description}
+                </p>
             ))}
         </div>
     );
