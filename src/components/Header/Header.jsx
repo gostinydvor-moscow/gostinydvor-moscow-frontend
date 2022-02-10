@@ -11,10 +11,21 @@ const Header = () => {
     const [stateHeaderModalMenuAnimation, setStateHeaderModalMenuAnimation] =
         React.useState(false);
 
+    const [stateVisibleButtonMenuModal, setStateVisibleButtonMenuModal] =
+        React.useState(false);
+
     const HeaderModalMenuRef = React.useRef();
 
     React.useEffect(() => {
         document.body.addEventListener("click", handHeaderModalMenu);
+
+        window.addEventListener("scroll", () => {
+            if (Math.floor(window.pageYOffset) > 200) {
+                setStateVisibleButtonMenuModal(true);
+            } else {
+                setStateVisibleButtonMenuModal(false);
+            }
+        });
     }, []);
 
     const setCookiesClick = () => {
@@ -53,6 +64,25 @@ const Header = () => {
 
     return (
         <>
+            <div
+                className={`header-menu-btn-fixed ${
+                    stateVisibleButtonMenuModal ? "active" : ""
+                }`}
+                onClick={openModalMenu}
+            >
+                <svg
+                    width="30"
+                    height="20"
+                    viewBox="0 0 30 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="30" height="2" rx="1" fill="black" />
+                    <rect y="9" width="30" height="2" rx="1" fill="black" />
+                    <rect y="18" width="30" height="2" rx="1" fill="black" />
+                </svg>
+            </div>
+
             {localStorage.getItem("cookie") || stateCookies ? null : (
                 <div className="cookies">
                     <h4 className="cookies__title">Мы используем cookies</h4>

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 
 const Footer = () => {
     const checkActive = (match, location) => {
@@ -37,6 +37,10 @@ const Footer = () => {
                                     />
                                 </a>
                             </div>
+
+                            <p className="footer-noofficial">
+                                гостиныйдвор.москва - является неофициальным ресурсом
+                            </p>
                         </div>
                     </div>
                     <div className="footer-block">
